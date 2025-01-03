@@ -4,9 +4,11 @@ m4_dnl Modified by Alberto Ros and Christos Sakalis, 2015
 m4_divert(-1)
 m4_define(NEWPROC,) m4_dnl
 
-m4_dnl Empty ROI markers
-m4_define(SPLASH4_ROI_BEGIN, `')
-m4_define(SPLASH4_ROI_END, `')
+m4_dnl ROI markers for Sniper integration
+m4_define(`SPLASH4_ROI_BEGIN', `#include "sim_api.h"
+SimRoiStart()')m4_dnl
+m4_define(`SPLASH4_ROI_END', `#include "sim_api.h"
+SimRoiEnd()')m4_dnl
 
 m4_dnl Region markers
 m4_define(_NOTE_START_LOCK, `')
